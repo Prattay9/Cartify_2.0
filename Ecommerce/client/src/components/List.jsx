@@ -27,8 +27,10 @@ const List = () => {
         
             {
                 state.filter((fil)=>{
-                    
-                    if(fil.category.includes(filname)){
+                    if(fil.title.includes(filname)){return(
+                        <></>
+                    )}
+                    else if(fil.category.includes(filname)){
                         return (
                             <>  
 
@@ -36,8 +38,11 @@ const List = () => {
                         );
                     }
                     else if(fil.catergory==""){
-            
+                        return(
+                            <></>
+                        )
                     }
+                    
                 }).map((ele) => {
                     return (
                         <>

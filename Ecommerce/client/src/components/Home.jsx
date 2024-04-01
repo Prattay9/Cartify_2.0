@@ -32,13 +32,13 @@ const Home = () => {
    
     const onSearch =(e)=>{
         let name = e.target.id;
-        alert(e);    
-        navigate('/list',{ state:{id : name}});
+         
+         navigate('/list',{ state:{id : name}});
     }   
 
     const onSearchList =(e)=>{
         let name = e.target.id;
-        alert(e);    
+           
         navigate('/list',{ state:{id : name}});
     }  
 
@@ -47,47 +47,47 @@ const Home = () => {
             <Navbar/>
             <div className="card-container justify-content-center flex-wrap mt-2 p-2 d-flex">
 
-                <div className="card m-3 col-lg-1">
+                <div className="card m-3 col-lg-1" id="top" onClick={(e)=>{onSearchList(e)}}>
                     <img src={sale} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center" onClick={(e)=>{onSearchList(e)}}>Top Sales</p>
+                        <p className="card-text text-center" >Top Sales</p>
                     </div>
                 </div>
-                <div className="card m-3 col-lg-1">
+                <div className="card m-3 col-lg-1" >
                     <img src={bag} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center">Bags</p>
+                        <p className="card-text text-center" onClick={(e)=>{onSearch(e)}}  id = "Backpack">Bags</p>
                     </div>
                 </div>
-                <div className="card m-3 col-lg-1">
+                <div className="card m-3 col-lg-1" >
                     <img src={makeup} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center">Jewellery</p>
+                        <p className="card-text text-center" onClick={(e)=>{onSearch(e)}}  id = "jewelery">Jewellery</p>
                     </div>
                 </div>
                 <div className="card m-3 col-lg-1">
                     <img src={harddisk} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center">Harddisk</p>
+                        <p className="card-text text-center" onClick={(e)=>{onSearch(e)}}  id = "Hard Drive">Harddisk</p>
                     </div>
                 </div>
                 <div className="card m-3 col-lg-1">
                     <img src={tv} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center">Television</p>
+                        <p className="card-text text-center" onClick={(e)=>{onSearch(e)}}  id = "inches">Television</p>
                     </div>
                 </div>
 
                 <div className="card m-3 col-lg-1">
                     <img src={men} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center">Men</p>
+                        <p className="card-text text-center" onClick={(e)=>{onSearch(e)}}  id = "Mens">Men</p>
                     </div>
                 </div>
                 <div className="card m-3 col-lg-1">
                     <img src={women} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center">Women</p>
+                        <p className="card-text text-center" onClick={(e)=>{onSearch(e)}}  id = "women" >Women</p>
                     </div>
                 </div>
                 <div className="card m-3 col-lg-1">
