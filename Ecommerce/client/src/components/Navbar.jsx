@@ -12,6 +12,12 @@ const Navbar=()=>{
   const onSearch =()=>{
     navigate('/list',{ state:{id : search}});
   }
+  const onSignUp=()=>{
+    navigate('/users/sign_up');
+  }
+  const onLogin=()=>{
+    navigate('/users/sign_in');
+  }
     return (
         <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -34,8 +40,8 @@ const Navbar=()=>{
               </a>
               <ul className="dropdown-menu">
               <li><a className="dropdown-item" href="#"> <i class="zmdi zmdi-account"></i> My profile</a></li>
-                <li><a className="dropdown-item" href="#"><i class="zmdi zmdi-account-add"></i> Sign-up</a> </li>
-                <li><a className="dropdown-item" href="#"> <i class="zmdi zmdi-face"></i> Login</a></li>
+                <li onClick={(e)=>{onSignUp(e)}}><a className="dropdown-item" href="#"><i class="zmdi zmdi-account-add"></i> Sign-up</a> </li>
+                <li  onClick={(e)=>{onLogin(e)}}><a className="dropdown-item" href="#"> <i class="zmdi zmdi-face"></i> Login</a></li>
                 <li><a className="dropdown-item" href="#"><i class="zmdi zmdi-shopping-basket"></i> My orders</a></li>
               </ul>
             </li>

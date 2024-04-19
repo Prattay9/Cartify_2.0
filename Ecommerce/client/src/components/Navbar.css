@@ -20,3 +20,10 @@
     background-color: #3b984b !important;
     color:#001524
 }
+.dropdown-menu{
+    background-color: #3b984b;
+    border-radius: 12px;
+}
+*:hover{
+    transition: .3s ease;
+}

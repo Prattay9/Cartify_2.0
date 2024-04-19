@@ -41,6 +41,11 @@ const Home = () => {
            
         navigate('/list',{ state:{id : name}});
     }  
+    const onSearchError =(e)=>{
+        let name = e.target.id;
+           
+        navigate('/error',{ state:{id : name}});
+    }  
 
     return (
         <>
@@ -68,7 +73,7 @@ const Home = () => {
                 <div className="card m-3 col-lg-1">
                     <img src={harddisk} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center" onClick={(e)=>{onSearch(e)}}  id = "Hard Drive">Harddisk</p>
+                        <p className="card-text text-center" onClick={(e)=>{onSearch(e)}}  id = "Hard Drive">Hard Disk</p>
                     </div>
                 </div>
                 <div className="card m-3 col-lg-1">
@@ -93,7 +98,7 @@ const Home = () => {
                 <div className="card m-3 col-lg-1">
                     <img src={sofa} className="card-img-top" alt="..." />
                     <div className="card-body">
-                        <p className="card-text text-center">Furniture</p>
+                        <p className="card-text text-center"  onClick={(e)=>{onSearchError(e)}} >Furniture</p>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ import List from '../src/components/List';
 import Electronics from './components/Electronics';
 import Clothing from '../src/components/Clothing';
 import Popo from './components/Popo';
-
+import Error from './components/Error.jsx';
 function App() {
   return (
     <>
@@ -24,6 +24,7 @@ function App() {
       <Route path='/electronics' element={<Electronics/>}/>
       <Route path='/clothing' element={<Clothing/>}/>  
       <Route path='/popo' element={<Popo/>}/>  
+      <Route path='/error' element={<Error/>}/>  
     </Routes>
     </>
   );
