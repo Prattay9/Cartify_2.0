@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const app = express()
-const Db = 'mongodb+srv://prattaydas9:RWcxBajozbpQ7oHc@cluster0.cywxeuk.mongodb.net/Ecommerce?retryWrites=true&w=majority&appName=Cluster0'
+const Db = 'mongodb://localhost:27017/cart'
 
 mongoose.connect(Db, {
     useNewUrlParser: true,
